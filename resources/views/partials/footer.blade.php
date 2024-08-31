@@ -3,9 +3,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div>
-                    <script>
-                        document.write(new Date().getFullYear())
-                    </script> © Ubold - <a href="https://coderthemes.com/" target="_blank">Coderthemes.com</a>
+                    <a href="https://Dataforming.com.au" target="_blank">Coderthemes.com</a>
                 </div>
             </div>
             <div class="col-md-6">

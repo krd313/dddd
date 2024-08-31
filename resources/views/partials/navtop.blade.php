@@ -69,7 +69,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-animated dropdown-lg p-0">
                     <form class="p-3">
-                        <input type="search" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
+                        <input type="search" id="searchNavTop" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
                     </form>
                 </div>
             </li>
@@ -95,7 +95,7 @@
                 <a class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                     <img src="{{ asset('backend/assets/images/users/user-1.jpg') }}" alt="user-image" class="rounded-circle">
                     <span class="ms-1 d-none d-md-inline-block">
-                        Geneva <i class="mdi mdi-chevron-down"></i>
+                        User Name <i class="mdi mdi-chevron-down"></i>
                     </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end profile-dropdown ">
@@ -113,16 +113,22 @@
 
 
                     <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                        <i class="fe-log-out"></i>
-                        <span>Logout</span>
-                    </a>
 
-                </div>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+
+            <li><a class="dropdown-item notify-item" href="route('logout')" onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                    <i class="fe-log-out"></i><span> Logout</span>
+                </a>
             </li>
+            </form>
 
-            <!-- Right Bar offcanvas button (Theme Customization Panel) -->
-
-        </ul>
     </div>
+    </li>
+
+    <!-- Right Bar offcanvas button (Theme Customization Panel) -->
+
+    </ul>
+</div>
 </div>
